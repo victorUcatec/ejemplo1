@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('last_name');
             $table->integer('age');
             $table->string('cell_phone')->nullable();
+            $table->string('address')->nullable();
             $table->timestamps();
         });
     }
