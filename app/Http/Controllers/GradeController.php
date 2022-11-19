@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Teacher;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
-class TeacherController extends Controller
+class GradeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,19 +14,7 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        $teachers = Teacher::all();
-        return response()->json($teachers);
-        //return view('teachers.index', ['teachers' => $teachers]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('teachers.create');
+        //
     }
 
     /**
@@ -37,15 +25,7 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        //logica
-
-
-        $teacher = new Teacher();
-        $teacher->full_name = $request->full_name;
-        $teacher->profession = $request->profession;
-        $teacher->grade_academy = $request->grade_academy;
-        $teacher->cell_phone = $request->cell_phone;
-        $teacher->save();
+        //
     }
 
     /**
@@ -55,17 +35,6 @@ class TeacherController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
     {
         //
     }
